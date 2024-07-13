@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/sign-up.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="./js/scriptSignUpPage.js" defer></script>
+    <title>Sing Up form page</title>
+</head>
+<body>
+    <header class="header">
+        <button onclick="document.location='./index.html'" class="sign-up-btn">
+            Sign In
+            <object type="image/svg+xml" data="./images/enter icon white.svg" width="21" class="enter-icon"></object>
+        </button>
+    </header>
+    <main class="main">
+        <section class="main-form">
+            <h1 class="sign-in-form-title">SIGN UP</h1>
+            <form action="" method="post" class="sign-in-form">
+                <div class="registration-area">
+                    <h3 class="input-names">EMAIL</h3>
+                    <input type="email" class="input-area" id="inpt1" placeholder="Name@gmail.com">
+                    <div id="invalid-email">This field shouldn't be empty*</div>
+                </div>
+                <div class="registration-area">
+                    <h3 class="input-names">PHONE NUMBER</h3>
+                    <input type="tel" class="input-area" id="inpt2" placeholder="+X (XXX) XXX-XX-XX">
+                    <div id="invalid-phone">This field shouldn't be empty*</div>
+                </div>
+                <div class="password-and-button">
+                    <div class="registration-area" id="second-area">
+                        <h3 class="input-names">PASSWORD</h3>
+                        <div class="password-container">
+                            <input type="password" class="input-area" id="inpt3" placeholder="Your password" autocomplete="off" required>
+                            <img src="./images/no-view.svg" width="30" class="no-view-icon" id="toggle-icon" onclick="viewChangingIconFubction()">
+                        </div>
+                        <div id="invalid-password">This field shouldn't be empty*</div>
+                    </div>
+                    <button type="submit" class="sign-in-button" id="main-button" onclick="checkErrors()">
+                        Sign Up
+                        <object type="image/svg+xml" data="./images/new user black.svg" width="24" class="main-enter-icon"></object>
+                    </button>
+                </div>
+                <div class="create-account">
+                    <p class="no-account">Already have an account? <a href="./index.html" class="sign-up-create">Sign In</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">© Pipchenkova Alina, 2024</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <script src="./js/scriptIndex.js" defer></script>
+    <title>Sing In form page</title>
+</head>
+<body>
+    <header class="header">
+        <button onclick="document.location='./sign-up-page.html'" class="sign-up-btn">
+            Sign Up
+            <object type="image/svg+xml" data="./images/new user white.svg" width="20" class="new-user-icon"></object>
+        </button>
+    </header>
+    <main class="main">
+        <section class="main-form">
+            <h1 class="sign-in-form-title">SIGN IN</h1>
+            <form action="" method="post">
+                <div class="registration-area">
+                    <h3 class="input-names">EMAIL</h3>
+                    <input type="email" class="input-area" id="inpt1" placeholder="Name@gmail.com">
+                    <div id="invalid-email">This field shouldn't be empty*</div>
+                </div>
+                <div class="password-and-button">
+                    <div class="registration-area" id="second-area">
+                        <h3 class="input-names">PASSWORD</h3>
+                        <div class="password-container">
+                            <input type="password" class="input-area" id="inpt2" placeholder="Your password" autocomplete="off" required>
+                            <img src="./images/no-view.svg" width="30" class="no-view-icon" id="toggle-icon" onclick="viewChangingIconFubction()">
+                        </div>
+                        <div id="invalid-password">This field shouldn't be empty*</div>
+                    </div>
+                    <button type="submit" class="sign-in-button" id="main-button" onclick="checkErrors()">
+                        Sign In
+                        <object type="image/svg+xml" data="./images/enter icon black.svg" width="30" class="enter-icon"></object>
+                    </button>
+                </div>
+                <div class="create-account">
+                    <p class="no-account">Don't have an account? <a href="./sign-up-page.html" class="sign-up-create">Sign Up</a></p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">© Pipchenkova Alina, 2024</footer>
+</body>
+</html>

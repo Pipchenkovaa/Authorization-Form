@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Kreadon';
+    src: url("./fonts/Kreadon-Bold.ttf") format('truetype'), 
+    url("./fonts/Kreadon-Demi.ttf") format('truetype'), 
+    url("./fonts/Kreadon-Light.ttf") format('truetype'), 
+    url("./fonts/Kreadon-ExtraBold.ttf") format('truetype'), 
+    url("./fonts/Kreadon-ExtraLight.ttf") format('truetype'), 
+    url("./fonts/Kreadon-Medium.ttf") format('truetype'), 
+    url("./fonts/Kreadon-Regular.ttf") format('truetype'), 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Kreadon", sans-serif;
+}
+
+body {
+    background: url("/images/background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+:root {
+    --main-color: #efefef;
+    --dark-color: #001b16;
+    --dark-background-color: rgba(0, 0, 0, 0.3);
+    --light-btn-shadow-color: rgba(255, 255, 255, 0.7);
+    --green-color: rgb(62, 215, 172);
+    --shadow-color: rgba(66, 239, 190, 0.64);
+    --dark-grey-color: #bababa;
+    --light-grey-color: #cccccc;
+}
+
+@import "./header-sign-up";
+
+.main-form {
+    display: grid;
+    justify-content: center;
+    max-width: 500px;
+    padding: 30px 0 40px 0;
+    margin: auto;
+    background-color: var(--dark-background-color);  
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-radius: 27px;
+
+    .sign-in-form-title {
+        text-align: center;
+        font-weight: 900;
+        font-size: 35px;
+        color: var(--main-color);
+    }
+
+    .registration-area {
+        line-height: 1%;
+        margin-bottom: 8%;
+        color: var(--main-color);
+
+        .input-names {
+            font-size: 14px;
+        }
+        
+        .input-area {
+            width: 310px;
+            height: 40px;
+            border-style: hidden;
+            background-color: transparent;  
+            border-bottom: 2px solid var(--main-color);
+            color: currentColor;
+            font-size: 18px;
+        }
+
+        input{
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+        }
+        
+        input:hover, 
+        input:focus, 
+        input:active {
+            outline: 0;
+            outline-offset: 0;
+            caret-color: var(--main-color);
+            color: currentColor;
+            font-size: 18px;
+        }
+        
+        ::placeholder {
+            font-size: 16px;
+            font-weight: 300;
+            color: var(--dark-grey-color);
+        }
+
+        #invalid-email,
+        #invalid-phone,
+        #invalid-password {
+        display: none;
+        color: red;
+        margin-top: 15px; 
+        }
+
+        .password-container {
+            display: flex;
+            position: relative;
+            align-items: center;
+            width: 310px;
+
+            .input-area {
+                width: 100%; 
+                padding-right: 5px; 
+            }
+
+            img {
+                margin-bottom: 8px;
+                margin-right: -8px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .password-and-button {
+
+        .sign-in-button {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: -11px;
+            padding: 10px 20px;
+            font-size: 19px;
+            width: 310px;
+            border-radius: 10px;
+            background-color: var(--light-grey-color);
+            border: none;
+
+            .main-enter-icon {
+                margin-left: 5px;
+            }
+        }
+        
+        .sign-in-button:active, 
+        .sign-in-button:hover,
+        .sign-in-button:focus {
+            cursor: pointer;
+            background-color: var(--main-color);
+            box-shadow: 0 0 0.3rem 0 var(--light-btn-shadow-color);
+            transition: all 0.4s;
+        }
+    }
+
+    .create-account {
+        display: inline;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--main-color)
+    }
+    
+    a {
+        color: var(--main-color)
+    }
+    
+    a:active, 
+    a:hover, 
+    a:focus {
+        cursor: pointer;
+        color: var(--green-color);
+        text-decoration: none;
+        transition: all 0.4s;
+    }
+}
+
+.main-form:active, 
+.main-form:hover, 
+.main-form:focus {
+    box-shadow: 0 0 1.7rem 0 var(--shadow-color);
+    transition: all 0.4s;
+}
+
+@import "./footer";
