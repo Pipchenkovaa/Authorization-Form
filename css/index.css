@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Kreadon";
-  src: url("./fonts/Kreadon-B.woff2") format("woff2"), url("./fonts/Kreadon-D.woff2") format("woff2"), url("./fonts/Kreadon-L.woff2") format("woff2"), url("./fonts/Kreadon-EB.woff2") format("woff2"), url("./fonts/Kreadon-Lightest.woff2") format("woff2"), url("./fonts/Kreadon-M.woff2") format("woff2"), url("./fonts/Kreadon-R.woff2") format("woff2");
+  src: url("../fonts/Kreadon-B.woff2") format("woff2"), url("../fonts/Kreadon-D.woff2") format("woff2"), url("../fonts/Kreadon-L.woff2") format("woff2"), url("../fonts/Kreadon-EB.woff2") format("woff2"), url("../fonts/Kreadon-Lightest.woff2") format("woff2"), url("../fonts/Kreadon-M.woff2") format("woff2"), url("../fonts/Kreadon-R.woff2") format("woff2");
+  font-style: normal;
 }
 * {
   box-sizing: border-box;
