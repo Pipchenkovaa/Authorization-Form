@@ -8,7 +8,7 @@
 }
 
 body {
-  background: url("images/background.jpeg") no-repeat center center fixed;
+  background: url("../images/background.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
