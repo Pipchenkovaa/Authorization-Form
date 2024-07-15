@@ -69,7 +69,7 @@ body {
 }
 @media (max-width: 767px) {
   .main-form {
-    max-width: 370px;
+    max-width: 380px;
   }
 }
 .main-form .sign-in-form-title {
