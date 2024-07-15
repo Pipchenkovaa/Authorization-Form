@@ -59,7 +59,7 @@ body {
 .main-form {
   display: grid;
   justify-content: center;
-  max-width: 450px;
+  max-width: 470px;
   padding: 30px 0 40px 0;
   margin: auto;
   background-color: var(--dark-background-color);
@@ -67,11 +67,21 @@ body {
   backdrop-filter: blur(6px);
   border-radius: 27px;
 }
+@media (max-width: 767px) {
+  .main-form {
+    max-width: 370px;
+  }
+}
 .main-form .sign-in-form-title {
   text-align: center;
   font-weight: 900;
   font-size: 35px;
   color: var(--main-color);
+}
+@media (max-width: 767px) {
+  .main-form .sign-in-form-title {
+    font-size: 25px;
+  }
 }
 .main-form .registration-area {
   line-height: 1%;
@@ -161,6 +171,11 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: var(--main-color);
+}
+@media (max-width: 767px) {
+  .main-form .create-account {
+    font-size: 14px;
+  }
 }
 .main-form a {
   color: var(--main-color);
