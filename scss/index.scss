@@ -37,6 +37,7 @@ body {
 	--shadow-color: rgba(66, 239, 190, 0.64);
 	--dark-grey-color: #bababa;
 	--light-grey-color: #cccccc;
+	--red-prompts: #DC143C;
 }
 
 @import
@@ -171,7 +172,7 @@ body {
 		#invalid-password {
 			display: none;
 			font-size: 15px;
-			color: rgb(130, 0, 0);
+			color: var(--red-prompts);
 			margin-block: 6px;
 
 			@include mobile {
