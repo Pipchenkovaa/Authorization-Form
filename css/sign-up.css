@@ -25,27 +25,63 @@ body {
 }
 
 .header {
+  position: fixed;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: end;
-  margin: 20px 30px 45px;
+  margin: 40px 40px 0 40px;
+}
+@media (max-width: 767px) {
+  .header {
+    margin: 35px 35px 0 35px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    margin: 25px 30px 0 30px;
+  }
 }
 .header .sign-up-btn {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 25px;
+  font-size: 22px;
   font-weight: 900;
   color: var(--main-color);
-  border-radius: 10px;
+  border-radius: 16px;
   background: var(--dark-color);
   box-shadow: 0 0 0.5rem 0 var(--shadow-color);
   border: none;
 }
+@media (max-width: 767px) {
+  .header .sign-up-btn {
+    padding: 12px 22px;
+    font-size: 18px;
+    border-radius: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .header .sign-up-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+}
 .header .sign-up-btn .enter-icon {
-  margin-left: 5px;
+  margin-left: 6px;
+}
+@media (max-width: 767px) {
+  .header .sign-up-btn .enter-icon {
+    width: 22px;
+  }
+}
+@media (max-width: 480px) {
+  .header .sign-up-btn .enter-icon {
+    width: 20px;
+  }
 }
 .header .sign-up-btn:active,
 .header .sign-up-btn:hover,
@@ -56,20 +92,36 @@ body {
   transition: all 0.4s;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .main-form {
   display: grid;
   justify-content: center;
-  max-width: 470px;
-  padding: 30px 0 40px 0;
-  margin: auto;
+  align-items: center;
+  max-width: 450px;
+  padding: 30px 70px;
+  margin: 0 auto;
   background-color: var(--dark-background-color);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  border-radius: 27px;
+  border-radius: 30px;
 }
 @media (max-width: 767px) {
   .main-form {
     max-width: 380px;
+    max-width: 400px;
+    height: 430px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form {
+    max-width: 350px;
+    height: 400px;
   }
 }
 .main-form .sign-in-form-title {
@@ -80,7 +132,14 @@ body {
 }
 @media (max-width: 767px) {
   .main-form .sign-in-form-title {
+    font-size: 30px;
+    margin-block: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .sign-in-form-title {
     font-size: 25px;
+    margin-block: 7px;
   }
 }
 .main-form .registration-area {
@@ -88,8 +147,23 @@ body {
   margin-bottom: 8%;
   color: var(--main-color);
 }
+@media (max-width: 767px) {
+  .main-form .registration-area {
+    margin-bottom: 9%;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .registration-area {
+    margin-bottom: 10%;
+  }
+}
 .main-form .registration-area .input-names {
   font-size: 14px;
+}
+@media (max-width: 480px) {
+  .main-form .registration-area .input-names {
+    margin-bottom: 5%;
+  }
 }
 .main-form .registration-area .input-area {
   width: 310px;
@@ -99,6 +173,19 @@ body {
   border-bottom: 2px solid var(--main-color);
   color: currentColor;
   font-size: 18px;
+}
+@media (max-width: 767px) {
+  .main-form .registration-area .input-area {
+    font-size: 16px;
+    width: 280px;
+    height: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .registration-area .input-area {
+    font-size: 14px;
+    width: 240px;
+  }
 }
 .main-form .registration-area input {
   margin-bottom: 6px;
@@ -113,6 +200,20 @@ body {
   color: currentColor;
   font-size: 18px;
 }
+@media (max-width: 767px) {
+  .main-form .registration-area input:hover,
+  .main-form .registration-area input:focus,
+  .main-form .registration-area input:active {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .registration-area input:hover,
+  .main-form .registration-area input:focus,
+  .main-form .registration-area input:active {
+    font-size: 14px;
+  }
+}
 .main-form .registration-area ::-moz-placeholder {
   font-size: 16px;
   font-weight: 300;
@@ -122,6 +223,22 @@ body {
   font-size: 16px;
   font-weight: 300;
   color: var(--dark-grey-color);
+}
+@media (max-width: 767px) {
+  .main-form .registration-area ::-moz-placeholder {
+    font-size: 15px;
+  }
+  .main-form .registration-area ::placeholder {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .registration-area ::-moz-placeholder {
+    font-size: 14px;
+  }
+  .main-form .registration-area ::placeholder {
+    font-size: 14px;
+  }
 }
 .main-form .registration-area #invalid-email,
 .main-form .registration-area #invalid-phone,
@@ -136,9 +253,24 @@ body {
   align-items: center;
   width: 310px;
 }
+@media (max-width: 767px) {
+  .main-form .registration-area .password-container {
+    width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .registration-area .password-container {
+    width: 240px;
+  }
+}
 .main-form .registration-area .password-container .input-area {
   width: 100%;
   padding-right: 5px;
+}
+@media (max-width: 480px) {
+  .main-form .registration-area .password-container .input-area {
+    font-size: 14px;
+  }
 }
 .main-form .registration-area .password-container img {
   margin-bottom: 8px;
@@ -150,16 +282,40 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: -11px;
   padding: 10px 20px;
+  margin-top: -20px;
   font-size: 19px;
   width: 310px;
   border-radius: 10px;
   background-color: var(--light-grey-color);
   border: none;
 }
+@media (max-width: 767px) {
+  .main-form .password-and-button .sign-in-button {
+    font-size: 17px;
+    width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .password-and-button .sign-in-button {
+    font-size: 16px;
+    height: 45px;
+    width: 240px;
+  }
+}
 .main-form .password-and-button .sign-in-button .main-enter-icon {
   margin-left: 5px;
+}
+@media (max-width: 767px) {
+  .main-form .password-and-button .sign-in-button .main-enter-icon {
+    width: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .password-and-button .sign-in-button .main-enter-icon {
+    width: 20px;
+    margin-left: 4px;
+  }
 }
 .main-form .password-and-button .sign-in-button:active,
 .main-form .password-and-button .sign-in-button:hover,
@@ -179,6 +335,11 @@ body {
 @media (max-width: 767px) {
   .main-form .create-account {
     font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .main-form .create-account {
+    font-size: 12px;
   }
 }
 .main-form a {

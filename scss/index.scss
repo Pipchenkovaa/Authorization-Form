@@ -1,189 +1,280 @@
 @font-face {
-    font-family: 'Kreadon';
-    src: url("../fonts/Kreadon-B.woff2") format('woff2'), 
-    url("../fonts/Kreadon-D.woff2") format('woff2'), 
-    url("../fonts/Kreadon-L.woff2") format('woff2'), 
-    url("../fonts/Kreadon-EB.woff2") format('woff2'), 
-    url("../fonts/Kreadon-Lightest.woff2") format('woff2'), 
-    url("../fonts/Kreadon-M.woff2") format('woff2'), 
-    url("../fonts/Kreadon-R.woff2") format('woff2');
-    font-style: normal;
+	font-family: 'Kreadon';
+	src: url("../fonts/Kreadon-B.woff2") format('woff2'), 
+	url("../fonts/Kreadon-D.woff2") format('woff2'), 
+	url("../fonts/Kreadon-L.woff2") format('woff2'), 
+	url("../fonts/Kreadon-EB.woff2") format('woff2'), 
+	url("../fonts/Kreadon-Lightest.woff2") format('woff2'), 
+	url("../fonts/Kreadon-M.woff2") format('woff2'), 
+	url("../fonts/Kreadon-R.woff2") format('woff2');
+	font-style: normal;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: "Kreadon", sans-serif;
+	box-sizing: border-box;
+	font-family: "Kreadon", sans-serif;
 }
 
 body {
-    background: url("../images/background.jpeg") no-repeat center center fixed;
-    background-size: cover;
+	background: url("../images/background.jpeg") no-repeat center center fixed;
+	background-size: cover;
 }
 
 :root {
-    --main-color: #efefef;
-    --dark-color: #001b16;
-    --dark-background-color: rgba(0, 0, 0, 0.3);
-    --light-btn-shadow-color: rgba(255, 255, 255, 0.7);
-    --green-color: rgb(62, 215, 172);
-    --shadow-color: rgba(66, 239, 190, 0.64);
-    --dark-grey-color: #bababa;
-    --light-grey-color: #cccccc;
+	--main-color: #efefef;
+	--dark-color: #001b16;
+	--dark-background-color: rgba(0, 0, 0, 0.3);
+	--light-btn-shadow-color: rgba(255, 255, 255, 0.7);
+	--green-color: rgb(62, 215, 172);
+	--shadow-color: rgba(66, 239, 190, 0.64);
+	--dark-grey-color: #bababa;
+	--light-grey-color: #cccccc;
 }
 
-@import 
-    './header-index',
-    './media';
+@import
+	'./header-index',
+	'./media';
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
 
 .main-form {
-    display: grid;
-    justify-content: center;
-    max-width: 470px;
-    padding: 30px 0 40px 0;
-    margin: auto;
-    background-color: var(--dark-background-color);  
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    border-radius: 27px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	max-width: 450px;
+	padding: 30px 60px;
+	margin: 0 auto;
+	background-color: var(--dark-background-color);  
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	border-radius: 30px;
 
-    @include mobile {
-        max-width: 380px;
-    }
+	@include mobile {
+		max-width: 400px;
+		height: 380px;
+	}
 
-    .sign-in-form-title {
-        text-align: center;
-        font-weight: 900;
-        font-size: 35px;
-        color: var(--main-color);
+	@include mobile-small {
+		max-width: 350px;
+		height: 350px;
+	}
 
-        @include mobile {
-            font-size: 25px;
-        }
-    }
+	.sign-in-form-title {
+		text-align: center;
+		font-weight: 900;
+		font-size: 35px;
+		color: var(--main-color);
 
-    .registration-area {
-        line-height: 1%;
-        margin-bottom: 10%;
-        color: var(--main-color);
+		@include mobile {
+			font-size: 30px;
+		}
+		
+		@include mobile-small {
+			font-size: 25px;
+			margin-block: 7px;
+		}
+	}
 
-        .input-names {
-            font-size: 14px;
-        }
-        
-        .input-area {
-            width: 310px;
-            height: 40px;
-            border-style: hidden;
-            background-color: transparent;  
-            border-bottom: 2px solid var(--main-color);
-            color: currentColor;
-            font-size: 18px;
-        }
+	.registration-area {
+		line-height: 1%;
+		margin-bottom: 10%;
+		color: var(--main-color);
+		
+		@include mobile {
+			margin-bottom: 11%;
+		}
 
-        input{
-            margin-bottom: 6px;
-            padding-bottom: 6px;
-        }
-        
-        input:hover, 
-        input:focus, 
-        input:active {
-            outline: 0;
-            outline-offset: 0;
-            caret-color: var(--main-color);
-            color: currentColor;
-            font-size: 18px;
-        }
-        
-        ::placeholder {
-            font-size: 16px;
-            font-weight: 300;
-            color: var(--dark-grey-color);
-        }
+		@include mobile-small {
+			margin-bottom: 12%;
+		}
 
-        #invalid-email,
-        #invalid-password {
-        display: none;
-        color: red;
-        margin-top: 15px; 
-        }
+		.input-names {
+			font-size: 14px;
 
-        .password-container {
-            display: flex;
-            position: relative;
-            align-items: center;
-            width: 310px;
+			@include mobile-small {
+				margin-bottom: 5%;
+			}
+		}
 
-            .input-area {
-                width: 100%; 
-                padding-right: 5px; 
-            }
+		.input-area {
+			width: 310px;
+			height: 40px;
+			border-style: hidden;
+			background-color: transparent;  
+			border-bottom: 2px solid var(--main-color);
+			color: currentColor;
+			font-size: 18px;
 
-            img {
-                margin-bottom: 8px;
-                margin-right: -8px;
-                cursor: pointer;
-            }
-        }
-    }
+			@include mobile {
+				font-size: 16px;
+				width: 260px;
+				height: 35px;
+			}
+			
+			@include mobile-small {
+				font-size: 14px;
+				width: 225px;
+			}
+		}
 
-    .password-and-button {
-        
-        .sign-in-button {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 20px;
-            margin-top: -20px;
-            font-size: 19px;
-            width: 310px;
-            border-radius: 10px;
-            background-color: var(--light-grey-color);
-            border: none;
-        }
-        
-        .sign-in-button:active, 
-        .sign-in-button:hover,
-        .sign-in-button:focus {
-            cursor: pointer;
-            background-color: var(--main-color);
-            box-shadow: 0 0 0.3rem 0 var(--light-btn-shadow-color);
-            transition: all 0.4s;
-        }
-    }
+		input {
+			margin-bottom: 6px;
+			padding-bottom: 6px;
+		}
+			
+		input:hover,
+		input:focus,
+		input:active {
+			outline: 0;
+			outline-offset: 0;
+			caret-color: var(--main-color);
+			color: currentColor;
+			font-size: 18px;
 
-    .create-account {
-        display: inline;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        color: var(--main-color);
+			@include mobile {
+				font-size: 16px;
+			}
+			
+			@include mobile-small {
+				font-size: 14px;
+			}
+		}
+			
+		::placeholder {
+			font-size: 16px;
+			font-weight: 300;
+			color: var(--dark-grey-color);
 
-        @include mobile {
-            font-size: 14px;
-        }
-    }
-    
-    a {
-        color: var(--main-color);
-    }
-    
-    a:active, 
-    a:hover, 
-    a:focus {
-        cursor: pointer;
-        color: var(--green-color);
-        text-decoration: none;
-        transition: all 0.4s;
-    }
+			@include mobile {
+				font-size: 15px;
+			}
+			
+			@include mobile-small {
+				font-size: 14px;
+			}
+		}
+
+		#invalid-email,
+		#invalid-password {
+			display: none;
+			color: red;
+			margin-top: 15px; 
+		}
+
+		.password-container {
+			display: flex;
+			position: relative;
+			align-items: center;
+			width: 310px;
+
+			@include mobile {
+				width: 260px;
+			}
+
+			@include mobile-small {
+				width: 225px;
+			}
+
+			.input-area {
+				width: 100%;
+				padding-right: 5px;
+
+				@include mobile-small {
+					font-size: 14px;
+				}
+			}
+
+			img {
+				margin-bottom: 8px;
+				margin-right: -8px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.password-and-button {
+		.sign-in-button {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 20px;
+			margin-top: -20px;
+			font-size: 19px;
+			width: 310px;
+			border-radius: 10px;
+			background-color: var(--light-grey-color);
+			border: none;
+
+			@include mobile {
+				font-size: 17px;
+				width: 260px;
+			}
+
+			@include mobile-small {
+				font-size: 16px;
+				width: 225px;
+				height: 45px;
+			}
+
+			.enter-icon {
+				@include mobile-small {
+					width: 25px;
+					height: 25px;
+				}
+			}
+		}
+		
+		.sign-in-button:active, 
+		.sign-in-button:hover,
+		.sign-in-button:focus {
+			cursor: pointer;
+			background-color: var(--main-color);
+			box-shadow: 0 0 0.3rem 0 var(--light-btn-shadow-color);
+			transition: all 0.4s;
+		}
+	}
+
+	.create-account {
+		display: inline;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 400;
+		color: var(--main-color);
+
+		@include mobile {
+			font-size: 14px;
+		}
+		
+		@include mobile {
+			font-size: 13px;
+		}
+	}
+
+	a {
+		color: var(--main-color);
+	}
+
+	a:active,
+	a:hover,
+	a:focus {
+		cursor: pointer;
+		color: var(--green-color);
+		text-decoration: none;
+		transition: all 0.4s;
+	}
 }
 
 .main-form:active, 
 .main-form:hover, 
 .main-form:focus {
-    box-shadow: 0 0 1.7rem 0 var(--shadow-color);
-    transition: all 0.4s;
+	box-shadow: 0 0 1.7rem 0 var(--shadow-color);
+	transition: all 0.4s;
 }
 
 @import "./footer";

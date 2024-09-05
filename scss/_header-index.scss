@@ -1,34 +1,67 @@
+@import
+	'./media';
+
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin: 20px 30px 45px;
+	position: fixed;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	margin: 40px 40px 0 40px;
 
-    .sign-up-btn {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 20px;
-        font-size: 16px;
-        font-weight: 900;
-        color: var(--main-color);
-        border-radius: 10px;
-        background: var(--dark-color);
-        box-shadow: 0 0 0.5rem 0 var(--shadow-color);
-        border: none;
+	@include mobile {
+		margin: 35px 35px 0 35px;
+	}
+	
+	@include mobile-small {
+		margin: 25px 30px 0 30px;
+	}
 
-        .new-user-icon {
-            margin-left: 5px;
-        }
-    }
-    
-    .sign-up-btn:active, 
-    .sign-up-btn:hover, 
-    .sign-up-btn:focus {
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 0 1rem 0 var(--green-color);
-        transition: all 0.4s;
-    }
+	.sign-up-btn {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 25px;
+		font-size: 22px;
+		font-weight: 900;
+		color: var(--main-color);
+		border-radius: 16px;
+		background: var(--dark-color);
+		box-shadow: 0 0 0.5rem 0 var(--shadow-color);
+		border: none;
+
+		@include mobile {
+			padding: 12px 22px;
+			font-size: 18px;
+			border-radius: 14px;
+		}
+		
+		@include mobile-small {
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 12px;
+		}
+
+		.new-user-icon {
+			margin-left: 6px;
+			
+			@include mobile {
+				width: 22px;
+			}
+			
+			@include mobile-small {
+				width: 20px;
+			}
+		}
+	}
+	
+	.sign-up-btn:active, 
+	.sign-up-btn:hover, 
+	.sign-up-btn:focus {
+		border: none;
+		cursor: pointer;
+		box-shadow: 0 0 1rem 0 var(--green-color);
+		transition: all 0.4s;
+	}
 }
