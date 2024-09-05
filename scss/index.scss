@@ -15,10 +15,18 @@
 	font-family: "Kreadon", sans-serif;
 }
 
+html, body {
+	height: 100%;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	margin: 0;
+}
+
 body {
 	background: url("../images/background.jpeg") no-repeat center center fixed;
 	background-size: cover;
 }
+
 
 :root {
 	--main-color: #efefef;
@@ -39,7 +47,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 100%;
 }
 
 .main-form {
@@ -162,8 +170,14 @@ body {
 		#invalid-email,
 		#invalid-password {
 			display: none;
-			color: red;
-			margin-top: 15px; 
+			font-size: 15px;
+			color: rgb(123, 0, 0);
+			margin-block: 6px;
+
+			@include mobile {
+				font-size: 12px;
+				margin-block: 3px;
+			}
 		}
 
 		.password-container {
@@ -214,6 +228,7 @@ body {
 			@include mobile {
 				font-size: 17px;
 				width: 260px;
+				margin-top: -17px;
 			}
 
 			@include mobile-small {

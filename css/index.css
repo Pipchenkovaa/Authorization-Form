@@ -8,6 +8,13 @@
   font-family: "Kreadon", sans-serif;
 }
 
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+}
+
 body {
   background: url("../images/background.jpeg") no-repeat center center fixed;
   background-size: cover;
@@ -96,7 +103,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .main-form {
@@ -241,8 +248,16 @@ body {
 .main-form .registration-area #invalid-email,
 .main-form .registration-area #invalid-password {
   display: none;
-  color: red;
-  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(123, 0, 0);
+  margin-block: 6px;
+}
+@media (max-width: 767px) {
+  .main-form .registration-area #invalid-email,
+  .main-form .registration-area #invalid-password {
+    font-size: 12px;
+    margin-block: 3px;
+  }
 }
 .main-form .registration-area .password-container {
   display: flex;
@@ -291,6 +306,7 @@ body {
   .main-form .password-and-button .sign-in-button {
     font-size: 17px;
     width: 260px;
+    margin-top: -17px;
   }
 }
 @media (max-width: 480px) {
